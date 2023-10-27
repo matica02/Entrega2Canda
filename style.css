@@ -25,6 +25,24 @@ a {
   font-family: "Oswald", sans-serif;
 }
 
+.formulario {
+  padding: 30px;
+}
+
+.form-input {
+  border: 0;
+  font-family: "Quickand", sans-serif;
+  padding: 5px;
+}
+
+.send-btn {
+  padding: 5px;
+  border: 0;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  background-color: black;
+}
+
 h1 {
   font-size: 12rem;
   text-align: center;

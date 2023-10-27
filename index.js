@@ -1,3 +1,27 @@
+const form = document.getElementById("form")
+
+form.addEventListener("submit", (e) => {crearUsuario(e)})
+
+function crearUsuario(e){
+    e.preventDefault()
+    
+    let formNombre = document.getElementById("nombre")
+    let formApellido = document.getElementById("apellido")
+    let formEdad = document.getElementById("edad")
+    let formEmail = document.getElementById("email")
+
+    const usuario = {
+        nombre: formNombre.value,
+        apellido: formApellido.value,
+        edad: formEdad.value,
+        email: formEmail.value,
+    }
+
+    console.log(usuario)
+    localStorage.setItem("user", JSON.stringify(usuario))
+    form.reset()
+}
+
 const autos= [
 {
     id: 1,
