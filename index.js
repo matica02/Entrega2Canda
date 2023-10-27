@@ -1,20 +1,3 @@
-/* const contenedor= document.getElementById("contenedorGeneral")
-
-let botonLambo= document.getElementsByClassName("btn-lamborghini");
-let botonMercedes= document.getElementById("btn-mercedes");
-let botonVolkswagen= document.getElementById("btn-volkswagen");
-let botonPorsche= document.getElementById("btn-porsche"); */
-
-/* function agregarLambo() {
-    let contenedorLambo = document.createElement("li")
-    contenedorLambo.innerHTML = `<li class="nav-item">
-    <p class="nav-link">Lamborghini Aventador, Price: 110usd</p>
-    </li>`;
-contenedor.appendChild(contenedorLambo);
-};
-
-botonLambo.addEventListener("click", agregarLambo); */
-
 const autos= [
 {
     id: 1,
@@ -42,7 +25,7 @@ const autos= [
 },
 ];
 
-const contenedorAutos= document.querySelector("#contenedorAutos")
+const contenedorAutos= document.querySelector("#contenedorAutos");
 
 function crearCards(){
     autos.forEach((auto) => {
@@ -59,21 +42,22 @@ function crearCards(){
 
         contenedorAutos.appendChild(contenedorAuto)
     })
-}
+};
 
 crearCards();
 
-const contenedorCarrito= document.querySelector("#contenedorCarrito")
+const contenedorCarrito= document.querySelector("#contenedorCarrito");
 
 const btnLambo = document.getElementById("btn-1")
 
 btnLambo.addEventListener("click", agregarACarrito)
+
 function agregarACarrito(){
     let contenedorLambo = document.createElement("li")
     contenedorLambo.innerHTML = `<li class="nav-item">
     <p class="nav-link">Lamborghini Aventador, Precio: 110 USD.</p>
     </li>`;
-contenedorCarrito.appendChild(contenedorLambo);
+contenedorCarrito.appendChild(contenedorLambo)
 };
 
 
