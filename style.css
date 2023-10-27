@@ -119,6 +119,7 @@ footer p {
 .card-text {
   font-family: "Oswald", sans-serif;
   text-align: center;
+  margin-top: 5px;
 }
 
 .card-bmwaudi {
