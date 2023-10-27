@@ -30,15 +30,18 @@ a {
 }
 
 .form-input {
-  border: 0;
   font-family: "Quickand", sans-serif;
+  border-style: solid;
+  border-color: black;
   padding: 5px;
+  background-color: transparent;
 }
 
 .send-btn {
-  padding: 5px;
+  padding: 8px;
   border: 0;
   font-family: "Quicksand", sans-serif;
+  font-size: 20px;
   color: white;
   background-color: black;
 }
@@ -120,12 +123,13 @@ footer p {
 .card-text {
   font-family: "Oswald", sans-serif;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .card-btn {
   background-color: black;
   padding: 5px;
+  margin: 0px 45px 30px 45px;
 }
 
 /* WALLPAPER */
@@ -197,12 +201,6 @@ body {
 .index-footer {
   background-color: #2d2e2e;
   color: #a9aaab;
-  padding-bottom: 20px;
-  transition: all 2s;
-}
-
-.index-footer:hover {
-  padding-bottom: 50px;
 }
 
 .cards-vw {
@@ -220,7 +218,7 @@ body {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 5rem;
-    margin: 100px 50px 100px 50px;
+    margin: 50px 50px 100px 50px;
     text-align: left;
   }
   .nav-item {
@@ -228,19 +226,39 @@ body {
   }
   main {
     padding: 40px 0px 30px 0px;
+    margin-top: 180px;
   }
   .index-subtitle {
     font-size: 2rem;
     margin: 20px;
   }
-
   footer h3 {
     font-size: 3rem;
   }
   footer p {
     font-size: 1.5rem;
   }
+  .card-bmwaudi {
+    height: 300px;
+    width: 260px;
+  }
   .card-text {
     font-size: 1.25rem;
+  }
+  .navbar-toggler {
+    top: 30px;
+    right: 8px;
+    border: 0;
+  }
+  .golf-sinfondo {
+    top: 280px;
+    left: 250px;
+    width: 350px;
+  }
+  .audi-sinfondo {
+    display: none;
+  }
+  .form-input {
+    width: 80px;
   }
 }

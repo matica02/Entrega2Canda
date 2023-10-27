@@ -91,7 +91,7 @@ btnLambo.addEventListener("click", agregarACarrito)
 function agregarACarrito(){
     let contenedorLambo = document.createElement("li")
     contenedorLambo.innerHTML = `<li class="nav-item">
-    <p class="nav-link">Lamborghini Aventador, Precio: 110 USD.</p>
+    <p class="nav-link">Lamborghini Aventador, Precio: 120 USD.</p>
     </li>`;
 contenedorCarrito.appendChild(contenedorLambo)
 };
