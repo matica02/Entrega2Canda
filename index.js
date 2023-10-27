@@ -47,12 +47,12 @@ const contenedorAutos= document.querySelector("#contenedorAutos")
 function crearCards(){
     autos.forEach((auto) => {
         let contenedorAuto = document.createElement("div")
-        contenedorAuto.innerHTML = `<div class="card cards-vw mx-auto col-sm-12 col-md-2 col-lg-2">
+        contenedorAuto.innerHTML = `<div class="card cards-vw mx-auto /* col-sm-12 col-md-2 col-lg-2 */">
         <img class="rounded" src="${auto.img}"
           <div class="card-body">
             <h3 class="card-text">${auto.nombre}</h3> 
-            <p class="card-text">Price: ${auto.precio}usd</p> 
-            <a class="card-text" id="btn-${auto.id}" href="#">Add to the cart.</a>
+            <p class="card-text">Price: ${auto.precio} USD</p> 
+            <a class="card-text card-btn rounded" id="btn-${auto.id}" href="#">ADD TO CART</a>
           </div>
       </div> `
     
@@ -61,7 +61,20 @@ function crearCards(){
     })
 }
 
-crearCards()
+crearCards();
 
+const contenedorCarrito= document.querySelector("#contenedorCarrito")
+
+const btnLambo = document.getElementById("btn-1")
+btnLambo.addEventListener("click", agregarACarrito)
+
+function agregarACarrito(){
+    let contenedorLambo = document.createElement("li")
+    contenedorLambo.innerHTML = `<li class="nav-item">
+    <p class="nav-link">Lamborghini Aventador, Precio: 110 USD.</p>
+    </li>`;
+contenedorCarrito.appendChild(contenedorLambo);
+
+};
 
 
