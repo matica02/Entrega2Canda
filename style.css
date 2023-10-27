@@ -44,9 +44,25 @@ a {
 }
 
 h1 {
-  font-size: 12rem;
+  font-size: 10rem;
   text-align: center;
-  margin: 200px 200px 350px 200px;
+  margin: 30px 200px 430px 200px;
+}
+
+.golf-sinfondo {
+  z-index: -1;
+  position: fixed;
+  top: 470px;
+  left: 40px;
+  width: 770px;
+}
+
+.audi-sinfondo {
+  z-index: -1;
+  position: fixed;
+  top: 600px;
+  right: 100px;
+  width: 650px;
 }
 
 .index-subtitle {

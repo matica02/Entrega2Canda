@@ -26,7 +26,7 @@ const autos= [
 {
     id: 1,
     nombre: "Lamborghini Aventador",
-    precio: 110,
+    precio: 120,
     img: "./img/lamborghini.png"
 },
 {
@@ -38,15 +38,27 @@ const autos= [
 {
     id: 3,
     nombre: "Volkswagen Golf R",
-    precio: 80,
+    precio: 70,
     img: "../img/volkswagen.png"
 },
 {
     id: 4,
     nombre: "Porsche GT3RS",
-    precio: 100,
+    precio: 110,
     img: "../img/porsche.png"
 },
+{
+    id: 5,
+    nombre: "Audi R8",
+    precio: 100,
+    img: "../img/audir8.png"
+},
+{
+    id: 6,
+    nombre: "BMW M4",
+    precio: 80,
+    img: "../img/m4.png"
+}
 ];
 
 const contenedorAutos= document.querySelector("#contenedorAutos");
@@ -54,7 +66,7 @@ const contenedorAutos= document.querySelector("#contenedorAutos");
 function crearCards(){
     autos.forEach((auto) => {
         let contenedorAuto = document.createElement("div")
-        contenedorAuto.innerHTML = `<div class="card cards-vw mx-auto /* col-sm-12 col-md-2 col-lg-2 */">
+        contenedorAuto.innerHTML = `<div class="card cards-vw mx-auto col-sm-12 col-md-2 col-lg-2">
         <img class="rounded" src="${auto.img}"
           <div class="card-body">
             <h3 class="card-text">${auto.nombre}</h3> 
