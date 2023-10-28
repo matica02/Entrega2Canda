@@ -1,6 +1,6 @@
-const form = document.getElementById("form");
+const form = document.getElementById("form")
 
-form.addEventListener("submit", (e) => {crearUsuario(e)});
+form.addEventListener("submit", (e) => {crearUsuario(e)})
 
 function crearUsuario(e){
     e.preventDefault()
@@ -20,7 +20,9 @@ function crearUsuario(e){
     console.log(usuario)
     localStorage.setItem("user", JSON.stringify(usuario))
     form.reset()
-};
+}
+
+const carrito= []
 
 const autos= [
 {
@@ -59,10 +61,10 @@ const autos= [
     precio: 80,
     img: "../img/m4.png",
 }
-];
+]
 
-const contenedorAutos= document.querySelector("#contenedorAutos");
-const contenedorCarrito= document.querySelector("#contenedorCarrito");
+const contenedorAutos= document.querySelector("#contenedorAutos")
+const contenedorCarrito= document.querySelector("#contenedorCarrito")
 
 function crearCards(){
     autos.forEach((auto) => {
@@ -72,39 +74,56 @@ function crearCards(){
           <div class="card-body">
             <h3 class="card-text">${auto.nombre}</h3> 
             <p class="card-text">Price: ${auto.precio} USD</p> 
-            <a class="card-text card-btn rounded" id="btn-${auto.id}" href="#">ADD TO CART</a>
+            <a class="card-text card-btn rounded" id="${auto.id}" href="#">ADD TO CART</a>
           </div>
       </div> `
     
-
         contenedorAutos.appendChild(contenedorAuto)
+        const btnAgregar= document.getElementById(`${auto.id}`)
+        btnAgregar.addEventListener("click" , () => agregarACarrito(auto.id))
     })
-};
+}
 
 crearCards();
 
-const btnLambo= document.getElementById("btn-1");
-const btnMercedes= document.getElementById("btn-2");
-const btnVolkswagen = document.getElementById("btn-3");
-const btnPorsche = document.getElementById("btn-4");
-const btnAudi = document.getElementById("btn-5");
-const btnBMW = document.getElementById("btn-6");
+function agregarACarrito(id){
+    const autoEncontrado= autos.find((auto) => auto.id == id)
+    carrito.push(autoEncontrado)
+    console.log(carrito)
+    mostrarCarrito()
+}
 
-btnLambo.addEventListener("click" , agregarACarrito(0));
-btnMercedes.addEventListener("click" , agregarACarrito(1));
-btnVolkswagen.addEventListener("click" , agregarACarrito(2));
-btnPorsche.addEventListener("click" , agregarACarrito(3));
-btnAudi.addEventListener("click" , agregarACarrito(4));
-btnBMW.addEventListener("click" , agregarACarrito(5));
+function mostrarCarrito (){
+    contenedorCarrito.innerHTML = ""
+    carrito.forEach((auto) => {
+        let contenedorProducto = document.createElement("li")
+        contenedorProducto.innerHTML = `
+        <li class="nav-item">
+            <p>${auto.nombre}</p>
+            <p>${auto.precio} USD</p>
+        </li>`;
+        contenedorCarrito.appendChild(contenedorProducto)
+    })
+}
+mostrarCarrito()
 
-function agregarACarrito(producto){
-    let contenedorProducto = document.createElement("li")
-    contenedorProducto.innerHTML = `<li class="nav-item">
-    <p>${autos[producto].nombre}, Precio: ${autos[producto].precio} USD</p></li>`;
-
-contenedorCarrito.appendChild(contenedorProducto)
-};
+                
 
 
 
+
+
+
+
+/* MULTIPLICADOR DE PRODUCTOS
+<div class="price-multip">
+    <p>${auto.precio} USD</p>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+        <option value="4">5</option>
+    </select>
+</div> */
 
